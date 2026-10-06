@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A One Tours and Travel | Hetauda, Nepal</title>
+    <meta name="description" content="Premium travel agency in Hetauda, Nepal. Book air tickets, rail tickets, and travel services. Always Open.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="A One Tours and Travel | Hetauda, Nepal">
+    <meta property="og:description" content="Book air tickets, rail tickets, and travel services with A One Tours and Travel. Contact us on WhatsApp today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aonetours.com">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#e0f2fe',
+                            DEFAULT: '#0284c7', // Brand Blue (Adjust based on logo)
+                            dark: '#0369a1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .floating-wa {
+            animation: pulse-wa 2s infinite;
+        }
+        @keyframes pulse-wa {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "A One Tours and Travel Pvt. Ltd.",
+      "image": "",
+      "@id": "",
+      "url": "",
+      "telephone": "+9779845915352",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Huprachaur",
+        "addressLocality": "Hetauda",
+        "addressCountry": "NP"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+                    <!-- Placeholder for Uploaded Logo -->
+                    <div class="text-2xl font-bold text-brand flex items-center gap-2">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        <span>A ONE</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-brand font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-brand font-medium transition">About Us</a>
+                    <a href="air-ticket.html" class="text-gray-700 hover:text-brand font-medium transition">Air Ticket</a>
+                    <a href="rail-ticket.html" class="text-gray-700 hover:text-brand font-medium transition">Rail Ticket</a>
+                    <a href="#services" class="text-gray-700 hover:text-brand font-medium transition">Travel Services</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand font-medium transition">Contact</a>
+                </nav>
+
+                <!-- Header CTA -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20services." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold transition flex items-center gap-2 shadow-lg hover:shadow-xl">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 shadow-inner">
+            <a href="index.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand font-medium">Home</a>
+            <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand font-medium">About Us</a>
+            <a href="air-ticket.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand font-medium">Air Ticket</a>
+            <a href="rail-ticket.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand font-medium">Rail Ticket</a>
+            <a href="#services" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand font-medium">Travel Services</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand font-medium">Contact</a>
+            <div class="px-4 mt-2">
+                <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20services." target="_blank" class="w-full bg-green-500 text-white px-4 py-3 rounded-md font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-32 lg:py-48 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Your Journey Starts With A One.</h1>
+            <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">Air Tickets, Rail Tickets and Travel Services from Hetauda, Nepal.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20services." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Chat on WhatsApp
+                </a>
+                <a href="#services" class="bg-white hover:bg-gray-100 text-brand px-8 py-4 rounded-full font-bold text-lg transition shadow-lg hover:shadow-xl">
+                    Book Your Ticket
+                </a>
+            </div>
+
+            <div class="inline-flex flex-col md:flex-row items-center justify-center gap-6 text-sm md:text-base font-medium bg-black/40 backdrop-blur-sm p-4 rounded-xl">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-light"></i> Huprachaur, Hetauda, Nepal</span>
+                <span class="hidden md:inline text-gray-400">|</span>
+                <a href="tel:+9779845915352" class="flex items-center gap-2 hover:text-brand-light"><i class="fa-solid fa-phone"></i> +977 9845915352</a>
+                <span class="hidden md:inline text-gray-400">|</span>
+                <a href="mailto:a1toursntravelp@gmail.com" class="flex items-center gap-2 hover:text-brand-light"><i class="fa-solid fa-envelope"></i> a1toursntravelp@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">A Travel Partner You Can Contact Anytime</h2>
+            <div class="w-24 h-1 bg-brand mx-auto mb-10"></div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+                <div class="p-4">
+                    <i class="fa-brands fa-whatsapp text-4xl text-green-500 mb-3"></i>
+                    <p class="font-semibold text-gray-800">Easy WhatsApp Booking</p>
+                </div>
+                <div class="p-4">
+                    <i class="fa-solid fa-plane-up text-4xl text-brand mb-3"></i>
+                    <p class="font-semibold text-gray-800">Air Ticket Assistance</p>
+                </div>
+                <div class="p-4">
+                    <i class="fa-solid fa-train text-4xl text-brand mb-3"></i>
+                    <p class="font-semibold text-gray-800">Rail Ticket Assistance</p>
+                </div>
+                <div class="p-4">
+                    <i class="fa-solid fa-headset text-4xl text-brand mb-3"></i>
+                    <p class="font-semibold text-gray-800">Personalized Travel Support</p>
+                </div>
+                <div class="p-4">
+                    <i class="fa-regular fa-clock text-4xl text-brand mb-3"></i>
+                    <p class="font-semibold text-gray-800">Quick Inquiry Response</p>
+                </div>
+                <div class="p-4">
+                    <i class="fa-solid fa-map-location-dot text-4xl text-brand mb-3"></i>
+                    <p class="font-semibold text-gray-800">Local Support from Hetauda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <div class="w-24 h-1 bg-brand mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="w-14 h-14 bg-brand-light rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-plane-up text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Air Ticket Booking</h3>
+                    <p class="text-gray-600 mb-8 flex-grow">Get assistance finding and booking domestic and international air tickets.</p>
+                    <a href="air-ticket.html" class="w-full bg-brand hover:bg-brand-dark text-white py-3 rounded-lg font-semibold text-center transition">Book Air Ticket</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="w-14 h-14 bg-brand-light rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-train text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Rail Ticket Booking</h3>
+                    <p class="text-gray-600 mb-8 flex-grow">Send your rail travel requirements and get assistance with your booking.</p>
+                    <a href="rail-ticket.html" class="w-full bg-brand hover:bg-brand-dark text-white py-3 rounded-lg font-semibold text-center transition">Book Rail Ticket</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="w-14 h-14 bg-brand-light rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-suitcase-rolling text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Travel Assistance</h3>
+                    <p class="text-gray-600 mb-8 flex-grow">Contact our team for personalized travel assistance and booking support.</p>
+                    <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20personalized%20travel%20assistance." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold text-center transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="w-14 h-14 bg-brand-light rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-regular fa-paper-plane text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Travel Inquiry</h3>
+                    <p class="text-gray-600 mb-8 flex-grow">Tell us your travel requirements and our team will contact you.</p>
+                    <a href="#contact" class="w-full bg-white border-2 border-brand text-brand hover:bg-brand hover:text-white py-3 rounded-lg font-semibold text-center transition">Send Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Travel Assistant Section -->
+    <section class="py-16 bg-white border-t border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-light to-blue-50 rounded-3xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-shrink-0">
+                    <div class="w-24 h-24 bg-brand rounded-full flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-robot text-4xl text-white"></i>
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Ask A One Travel Assistant</h2>
+                    <p class="text-gray-600 mb-4">Not sure where to start? Tell me what you're looking for, and I'll point you in the right direction.</p>
+                    
+                    <div class="bg-white p-4 rounded-xl shadow-inner border border-gray-100">
+                        <div id="ai-chat-box" class="h-32 overflow-y-auto mb-3 text-sm flex flex-col gap-2">
+                            <div class="bg-gray-100 p-3 rounded-lg rounded-tl-none self-start max-w-[80%]">
+                                Hello! I can help you choose the right service or direct you to WhatsApp for live support. Are you looking for a flight or a train ticket?
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <input type="text" id="ai-input" placeholder="E.g., I need a flight to Kathmandu..." class="flex-grow border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-sm">
+                            <button id="ai-send-btn" class="bg-brand text-white px-4 py-2 rounded-lg hover:bg-brand-dark transition text-sm font-semibold">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="py-20 bg-brand text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Have a Travel Plan in Mind?</h2>
+            <p class="text-xl text-brand-light mb-10">Tell A One Tours and Travel what you need. We'll help you with the next step.</p>
+            <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20to%20make%20a%20travel%20inquiry." target="_blank" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-xl">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Message Us on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Plan Your Journey?</h2>
+                    <p class="text-lg text-gray-600 mb-8">Send us your travel requirements and our team will assist you.</p>
+                    
+                    <div class="space-y-6 text-gray-700">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-building text-brand text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">A ONE TOURS AND TRAVEL PVT. LTD.</h4>
+                                <p>Huprachaur, Hetauda, Nepal</p>
+                                <p class="text-sm font-semibold text-green-600 mt-1">Status: Always Open</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">WhatsApp</h4>
+                                <a href="https://wa.me/9779845915352" target="_blank" class="hover:text-brand transition">+977 9845915352</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone text-brand text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Phone</h4>
+                                <a href="tel:+9779845915352" class="hover:text-brand transition">+977 9845915352</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope text-brand text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Email</h4>
+                                <a href="mailto:a1toursntravelp@gmail.com" class="hover:text-brand transition">a1toursntravelp@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Quick Contact Options</h3>
+                    
+                    <div class="flex flex-col gap-4">
+                        <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20to%20make%20a%20travel%20inquiry." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Message on WhatsApp
+                        </a>
+                        <a href="tel:+9779845915352" class="w-full bg-white border-2 border-brand text-brand hover:bg-brand hover:text-white py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-phone text-xl"></i> Call Now
+                        </a>
+                        <a href="mailto:a1toursntravelp@gmail.com" class="w-full bg-white border-2 border-gray-300 text-gray-700 hover:border-brand hover:text-brand py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-envelope text-xl"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <div class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-plane-departure text-brand-light"></i>
+                    <span>A ONE</span>
+                </div>
+                <p class="mb-2 font-bold text-white">A ONE TOURS AND TRAVEL PVT. LTD.</p>
+                <p class="mb-4">Huprachaur, Hetauda, Nepal</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/9779845915352" target="_blank" class="hover:text-white transition flex items-center gap-2"><i class="fa-brands fa-whatsapp text-green-500"></i> +977 9845915352</a>
+                    <a href="mailto:a1toursntravelp@gmail.com" class="hover:text-white transition flex items-center gap-2"><i class="fa-solid fa-envelope"></i> a1toursntravelp@gmail.com</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-brand-light transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-brand-light transition">About</a></li>
+                    <li><a href="air-ticket.html" class="hover:text-brand-light transition">Air Ticket</a></li>
+                    <li><a href="rail-ticket.html" class="hover:text-brand-light transition">Rail Ticket</a></li>
+                    <li><a href="#services" class="hover:text-brand-light transition">Travel Services</a></li>
+                    <li><a href="#contact" class="hover:text-brand-light transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Legal</h4>
+                <ul class="space-y-2 mb-6">
+                    <li><a href="#" class="hover:text-brand-light transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-brand-light transition">Terms & Conditions</a></li>
+                </ul>
+                <a href="https://wa.me/9779845915352?text=Hello" target="_blank" class="inline-flex items-center gap-2 bg-green-500/20 text-green-400 hover:bg-green-500 hover:text-white border border-green-500 px-6 py-2 rounded-full font-semibold transition">
+                    <i class="fa-brands fa-whatsapp"></i> Chat with us on WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-center text-sm">
+            <p>&copy; 2026 A One Tours and Travel Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20services." target="_blank" class="fixed bottom-6 right-6 z-50 floating-wa bg-green-500 text-white rounded-full p-4 shadow-2xl hover:bg-green-600 transition flex items-center justify-center group">
+        <i class="fa-brands fa-whatsapp text-3xl md:text-4xl"></i>
+        <span class="hidden md:block max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-300 font-bold whitespace-nowrap">Chat on WhatsApp</span>
+    </a>
+
+    <!-- Logic -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Basic AI Assistant Logic
+        const aiInput = document.getElementById('ai-input');
+        const aiSendBtn = document.getElementById('ai-send-btn');
+        const aiChatBox = document.getElementById('ai-chat-box');
+
+        function appendMessage(text, isUser) {
+            const div = document.createElement('div');
+            div.className = `p-3 rounded-lg max-w-[80%] ${isUser ? 'bg-brand text-white self-end rounded-tr-none' : 'bg-gray-100 self-start rounded-tl-none'}`;
+            div.innerHTML = text;
+            aiChatBox.appendChild(div);
+            aiChatBox.scrollTop = aiChatBox.scrollHeight;
+        }
+
+        function handleAiResponse(userText) {
+            const lowerText = userText.toLowerCase();
+            setTimeout(() => {
+                let response = "";
+                if (lowerText.includes('flight') || lowerText.includes('air')) {
+                    response = 'I can help with air tickets. Please fill out our <a href="air-ticket.html" class="text-brand font-bold underline">Air Ticket Booking Form</a> or <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20want%20to%20book%20an%20air%20ticket.%20Please%20help%20me%20with%20available%20flights%20and%20fares." target="_blank" class="text-green-600 font-bold underline">chat on WhatsApp</a>.';
+                } else if (lowerText.includes('train') || lowerText.includes('rail')) {
+                    response = 'I can help with rail tickets. Please fill out our <a href="rail-ticket.html" class="text-brand font-bold underline">Rail Ticket Booking Form</a> or <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20want%20to%20book%20a%20rail%20ticket.%20Please%20help%20me%20with%20available%20options%20and%20fares." target="_blank" class="text-green-600 font-bold underline">chat on WhatsApp</a>.';
+                } else {
+                    response = 'Please contact us directly on WhatsApp for current availability, fares, and personalized assistance: <a href="https://wa.me/9779845915352?text=Hello%20A%20One%20Tours%20and%20Travel,%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20services." target="_blank" class="text-green-600 font-bold underline">Click here to chat</a>.';
+                }
+                appendMessage(response, false);
+            }, 600);
+        }
+
+        aiSendBtn.addEventListener('click', () => {
+            const text = aiInput.value.trim();
+            if (text) {
+                appendMessage(text, true);
+                aiInput.value = '';
+                handleAiResponse(text);
+            }
+        });
+
+        aiInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') aiSendBtn.click();
+        });
+    </script>
+</body>
+</html>
